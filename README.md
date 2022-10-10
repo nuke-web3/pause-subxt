@@ -10,6 +10,10 @@ Before you can run the examples from the CLI included, you need to perform a few
 
 ```bash
 git clone git@github.com:paritytech/substrate.git
+
+# The example used for generation and testing with the included artifacts
+git checkout 917961b 
+
 # Note you must select a branch that includes these pallets
 cd substrate
 cargo b -r
@@ -34,7 +38,7 @@ cd pause-subxt
 subxt metadata -f bytes > artifacts/metadata.scale
 ```
 
-An example of the [artifacts/node-metadata.json](artifacts/node-metadata.json) for human inspection and [artifacts/node-metadata.scale](artifacts/node-metadata.json) for use in the application is included (_that likely not work for you, depending on the node's version in the future!_)
+An example of the [artifacts/node-metadata.json](artifacts/node-metadata.json) for human inspection and [artifacts/node-metadata.scale](artifacts/node-metadata.json) for use in the application is included generated from [this commit](https://github.com/paritytech/substrate/commit/917961b705d7dcce079485c12c356ceb85330d61) (_that likely not work for other versions of substrate using this pallet!_)
 
 ## Run this demo
 
